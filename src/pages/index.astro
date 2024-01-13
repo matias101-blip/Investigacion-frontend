@@ -1,0 +1,101 @@
+---
+import Layout from "../layouts/Layout.astro";
+const Textos = [
+	"Leer mas"
+]
+---
+<Layout>
+	<div class="navbar navbar-expand-md bg-dark border-body" data-bs-theme="dark">
+		<a class="navbar-brand" href="">ConceptCode</a>
+		<ul class="navbar-nav">
+			<li class="nav-item"><a href="#Variables" class="nav-link">Variables</a></li>
+			<li class="nav-item"><a href="#Condicionales" class="nav-link">Condicionales y Bucles</a></li>
+			<li class="nav-item"><a href="#Funciones" class="nav-link">Funciones</a></li>
+		</ul>
+	</div>
+	
+	<div class="container">
+		<div id="carousel-introduccion" class="carousel carousel-dark slide mt-5">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carousel-introduccion" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carousel-introduccion" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carousel-introduccion" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active" data-bs-interval="10000">
+					<div class="imgCarousel">
+						<img src="img/carousel1.jpg" alt="carousel1.png" class="d-block w-100">
+					</div>
+					<div class="carousel-caption d-none d-md-block">
+						<p class="text-white bg-dark bg-opacity-25">Aprender a programar no es difícil</p>
+					</div>
+				</div>
+				<div class="carousel-item" data-bs-interval="2000">
+					<img src="img/carousel2.jpg" alt="carousel2.png" class="d-block w-100">
+					<div class="carousel-caption d-none d-md-block">
+						<p class="text-white bg-dark bg-opacity-25">Pero para adentrarse en este mundillo, es necesario tener claros algunos conceptos.</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="img/carousel3.jpg" alt="carousel3.png" class="d-block w-100">
+					<div class="carousel-caption d-none d-md-block">
+						<p class="text-white bg-dark bg-opacity-25">Además, la programación no solo se trata de escribir código y creerse "hackers"; programar consiste en resolver problemas con lógica y algoritmos.</p>
+					</div>
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carousel-introduccion" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Anterior</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carousel-introduccion" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Siguiente</span>
+			</button>
+		</div>
+		<div class="seccion1 row mt-4">
+			<div id="Variables" class="card d-flex flex-row text-center">
+				<img class="card-img-top mt-auto mb-auto" src="../img/variable1.jpg" alt="variables.jpg" style="width: 50em; height:18em;">
+				<div class="card-body m-5 p-5">
+					<h2 class="card-title">Variables</h2>
+					<p class="card-text text-wrap">Las variables son una de las bases y de los primeros temas que se aprenden en la programación.</p>
+					<a href="/Variables" class="btn btn-primary">{Textos[0]}</a>
+				</div>
+			</div>
+		</div>
+		<div class="seccion2 row mt-4">
+			<div id="Condicionales" class="card col mx-1 text-start">
+				<img src="../img/Condicionales1.jpg" class="card-img-top" alt="condicionales.png" style="width: 28em;">
+				<div class="card-body">
+					<h2 class="card-title">Condicionales</h2>
+					<p class="card-text">Los condicionales son la forma en la que tomamos decisiones a la hora de ejecutar una acción; son el pilar en la programación.</p>
+					<a class="btn btn-primary">{Textos[0]}</a>
+				</div>
+			</div>
+			<div id="Bucles" class="card col mx-1 text-end">
+				<img class="card-img-top" src="../img/Bucles1.jpg" alt="bucles.png">
+				<div class="card-body">
+					<h2 class="card-title">Bucles</h2>
+					<p class="card-text">Los bucles nos permiten ejecutar procesos que son repetitivos de manera más simple y rápida.</p>
+					<a class="btn btn-primary">{Textos[0]}</a>
+				</div>
+			</div>
+		</div>
+		<div class="seccion3 row mt-4">
+			<div id="Funciones" class="card col text-center">
+				<img class="card-img-top" src="../img/Funcion1.png" alt="Funciones.png" style="width: 55%;">
+				<div class="card-body m-5 p-3">
+					<h2 class="card-title">Funciones</h2>
+					<p class="card-text">Las funciones son una forma de escribir un código en bloque y llamarlo en nuestro programa principal.</p>
+					<a class="btn btn-primary">{Textos[0]}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	#Funciones{
+		display: flex;
+		flex-direction: row-reverse;
+	}
+</style>
